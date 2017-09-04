@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>scrollToTop</title>
+  <style>
+   .componet-GoTop {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      bottom: 2.3rem;
+      right: 1.4rem;
+      background: rgba(0, 0, 0, 0.2);
+      width: 2.85rem;
+      height: 2.85rem;
+      border-radius: 100%;
+      transition: transform .2s ease;
+    }
+
+    .componet-GoTop-hide {
+      transform: translate3d(0, 5.2rem, 0);
+    }
+
+    .componet-GoTop-img {
+      width: 1rem;
+      height: 1rem;
+    }
+    .list {
+      height: 2000px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="list">请向下滚动</div>
+    <div onclick="window.scrollTo(0, 0);" id="goTop" class="componet-GoTop componet-GoTop-hide">
+      <img class="componet-GoTop-img" src="./goTop.png">
+    </div>
+  </div>
+  <script>
+    window.onscroll = () => {
+      const top = document.documentElement.scrollTop || document.body.scrollTop;
+      if (!document.getElementById('goTop')) {
+        return;
+      }
+      if (top > 550) {
+        document.getElementById('goTop').className = 'componet-GoTop';
+      } else {
+        document.getElementById('goTop').className = 'componet-GoTop componet-GoTop-hide';
+      }
+    };
+  </script>
+</body>
+</html>
