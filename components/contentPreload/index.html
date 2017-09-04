@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>contentPreload</title>
+  <style>
+    .placeholder {
+      background-color: #f6f7f8 !important;
+      background-image: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+      background-size: 800px 104px;
+      position: relative;
+    }
+
+    .placeholder-animation {
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+      animation-name: placeHolderShimmer;
+      animation-timing-function: linear;
+      transform: translateZ(0);
+    }
+
+    @-webkit-keyframes placeHolderShimmer {
+      0% {
+        background-position: -468px 0
+      }
+      100% {
+        background-position: 468px 0
+      }
+    }
+
+    .placeholder-container {
+      display: flex;
+    }
+
+    .placeholder-media {
+      width: 100px;
+      height: 100px;
+    }
+
+    .placeholder-word {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: 5px;
+    }
+
+    .placeholder-word-item {
+      width: 100%;
+      height: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="placeholder-container">
+    <div class="placeholder placeholder-animation placeholder-media"></div>
+    <div class="placeholder-word">
+      <div class="placeholder placeholder-animation placeholder-word-item"></div>
+      <div class="placeholder placeholder-animation placeholder-word-item"></div>
+      <div class="placeholder placeholder-animation placeholder-word-item"></div>
+    </div>
+  </div>
+</body>
+
+</html>
