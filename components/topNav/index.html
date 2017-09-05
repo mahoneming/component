@@ -1,12 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>topNav</title>
+  <link rel="stylesheet" href="../../reset.css">
+  <style>
+    .component-topNav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 47px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      color: #fff;
+      background-image: linear-gradient(to bottom, #333, rgba(255, 255, 255, .01));
+      transition: background .3s;
+    }
+
+    .component-topNav-white {
+      background-color: #fff;
+      background-image: none;
+      box-shadow: 1px 0 14px rgba(111, 108, 108, .5);
+      color: #ffd33f;
+    }
+
+    .container {
+      height: 100vh;
+      width: 100%;
+      overflow-y: auto;
+      background: #eaeef1;
+    }
+
+    .container img {
+      width: 100%;
+    }
+
+    .component-topNav-white .component-topNav-search {
+      background: #f4f4f4;
+    }
+
+    .component-topNav-search {
+      display: flex;
+      margin: 0 .35714rem;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+      position: relative;
+      padding: 0 .71429rem;
+      background: rgba(255, 255, 255, .2);
+      border-radius: 5px;
+      transition: background .3s;
+    }
+
+    .component-topNav-white .component-topNav-input {
+      color: #666;
+    }
+
+    .component-topNav-input {
+      width: 100%;
+      flex-grow: 1;
+      border: none;
+      color: #fff;
+      height: 27px;
+      padding-right: 1.07143rem;
+      transition: color .3s;
+      outline: 0;
+      background: none;
+    }
+
+    .component-topNav-submit {
+      width: 16px;
+      height: 16px;
+      border: 0;
+    }
+
+    .component-topNav-submit-icon {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .component-topNav-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2.85714rem;
+      color: currentColor;
+    }
+  </style>
 </head>
+
 <body>
-  更新中
+  <div class="component-topNav component-topNav-transparent">
+    <div class="component-topNav-icon">
+    </div>
+    <form class="component-topNav-search">
+      <input type="text" class="component-topNav-input" placeholder="请输入">
+      <!-- <button type="submit" class="component-topNav-submit">
+        <i class="fa fa-spinner fa-spin"></i>
+      </button> -->
+    </form>
+    <div class="component-topNav-icon">
+    </div>
+  </div>
+  <div onscroll="scroll(event)" class="container">
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504266949097&di=4800aaa3b0fe568672449c7864da1c80&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F0%2F53d9b04e0bf68.jpg"
+      alt="">
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504266949097&di=4800aaa3b0fe568672449c7864da1c80&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F0%2F53d9b04e0bf68.jpg"
+      alt="">
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504266949097&di=4800aaa3b0fe568672449c7864da1c80&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F0%2F53d9b04e0bf68.jpg"
+      alt="">
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504266949097&di=4800aaa3b0fe568672449c7864da1c80&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F0%2F53d9b04e0bf68.jpg"
+      alt="">
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504266949097&di=4800aaa3b0fe568672449c7864da1c80&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F0%2F53d9b04e0bf68.jpg"
+      alt="">
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504266949097&di=4800aaa3b0fe568672449c7864da1c80&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F0%2F53d9b04e0bf68.jpg"
+      alt="">
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504266949097&di=4800aaa3b0fe568672449c7864da1c80&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F0%2F53d9b04e0bf68.jpg"
+      alt="">
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504266949097&di=4800aaa3b0fe568672449c7864da1c80&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F0%2F53d9b04e0bf68.jpg"
+      alt="">
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504266949097&di=4800aaa3b0fe568672449c7864da1c80&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F0%2F53d9b04e0bf68.jpg"
+      alt="">
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504266949097&di=4800aaa3b0fe568672449c7864da1c80&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F0%2F53d9b04e0bf68.jpg"
+      alt="">
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504266949097&di=4800aaa3b0fe568672449c7864da1c80&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F0%2F53d9b04e0bf68.jpg"
+      alt="">
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504266949097&di=4800aaa3b0fe568672449c7864da1c80&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F0%2F53d9b04e0bf68.jpg"
+      alt="">
+  </div>
+  <script>
+    function scroll(e) {
+      if (e.target.scrollTop >= 300) {
+        document.querySelector('.component-topNav').className = 'component-topNav component-topNav-white';
+      } else {
+        document.querySelector('.component-topNav').className = 'component-topNav component-topNav-transparent';
+      }
+    }
+  </script>
 </body>
+
 </html>

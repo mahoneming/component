@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>scrollToTop</title>
   <style>
-   .componet-GoTop {
+   .component-GoTop {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -20,11 +20,11 @@
       transition: transform .2s ease;
     }
 
-    .componet-GoTop-hide {
+    .component-GoTop-hide {
       transform: translate3d(0, 5.2rem, 0);
     }
 
-    .componet-GoTop-img {
+    .component-GoTop-img {
       width: 1rem;
       height: 1rem;
     }
@@ -37,8 +37,8 @@
 <body>
   <div class="container">
     <div class="list">请向下滚动</div>
-    <div onclick="window.scrollTo(0, 0);" id="goTop" class="componet-GoTop componet-GoTop-hide">
-      <img class="componet-GoTop-img" src="./goTop.png">
+    <div onclick="window.scrollTo(0, 0);" id="goTop" class="component-GoTop component-GoTop-hide">
+      <img class="component-GoTop-img" src="./goTop.png">
     </div>
   </div>
   <script>
@@ -48,9 +48,9 @@
         return;
       }
       if (top > 550) {
-        document.getElementById('goTop').className = 'componet-GoTop';
+        document.getElementById('goTop').className = 'component-GoTop';
       } else {
-        document.getElementById('goTop').className = 'componet-GoTop componet-GoTop-hide';
+        document.getElementById('goTop').className = 'component-GoTop component-GoTop-hide';
       }
     };
   </script>

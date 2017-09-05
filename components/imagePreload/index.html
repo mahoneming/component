@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>imagePreload</title>
   <style>
-    .componet-placeholder {
+    .component-placeholder {
       background-color: #f6f6f6;
       background-size: cover;
       background-repeat: no-repeat;
@@ -14,7 +14,7 @@
       overflow: hidden;
     }
 
-    .componet-placeholder img {
+    .component-placeholder img {
       position: absolute;
       opacity: 0;
       top: 0;
@@ -23,11 +23,11 @@
       transition: opacity 5s linear;
     }
 
-    .componet-placeholder img.loaded {
+    .component-placeholder img.loaded {
       opacity: 1;
     }
 
-    .componet-img-small {
+    .component-img-small {
       filter: blur(50px);
       /* this is needed so Safari keeps sharp edges */
       transform: scale(1);
@@ -35,14 +35,14 @@
   </style>
 </head>
 <body>
-  <div class="componet-placeholder" data-large="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504266949097&di=4800aaa3b0fe568672449c7864da1c80&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F0%2F53d9b04e0bf68.jpg">
-  <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1126885416,156726633&fm=27&gp=0.jpg" class="componet-img-small">
+  <div class="component-placeholder" data-large="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504266949097&di=4800aaa3b0fe568672449c7864da1c80&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F0%2F53d9b04e0bf68.jpg">
+  <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1126885416,156726633&fm=27&gp=0.jpg" class="component-img-small">
   <div style="padding-bottom: 56.6%;"></div>
 </div>
 <script>
   window.onload = function() {
-    var placeholder = document.querySelector('.componet-placeholder'),
-        small = placeholder.querySelector('.componet-img-small')
+    var placeholder = document.querySelector('.component-placeholder'),
+        small = placeholder.querySelector('.component-img-small')
     
     // 1: load small image and show it
     var img = new Image();
