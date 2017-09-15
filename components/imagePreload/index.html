@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,31 +35,33 @@
     }
   </style>
 </head>
+
 <body>
   <div class="component-placeholder" data-large="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504266949097&di=4800aaa3b0fe568672449c7864da1c80&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F0%2F53d9b04e0bf68.jpg">
-  <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1126885416,156726633&fm=27&gp=0.jpg" class="component-img-small">
-  <div style="padding-bottom: 56.6%;"></div>
-</div>
-<script>
-  window.onload = function() {
-    var placeholder = document.querySelector('.component-placeholder'),
+    <img class="component-img-small" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1126885416,156726633&fm=27&gp=0.jpg">
+    <div style="padding-bottom: 56.6%;"></div>
+  </div>
+  <script>
+    window.onload = function () {
+      var placeholder = document.querySelector('.component-placeholder'),
         small = placeholder.querySelector('.component-img-small')
-    
-    // 1: load small image and show it
-    var img = new Image();
-    img.src = small.src;
-    img.onload = function () {
-    small.classList.add('loaded');
-    };
-    
-    // 2: load large image
-    var imgLarge = new Image();
-    imgLarge.src = placeholder.dataset.large; 
-    imgLarge.onload = function () {
-      imgLarge.classList.add('loaded');
-    };
-    placeholder.appendChild(imgLarge);
-  }
-</script>
+
+      // 1: load small image and show it
+      var img = new Image();
+      img.src = small.src;
+      img.onload = function () {
+        small.classList.add('loaded');
+      };
+
+      // 2: load large image
+      var imgLarge = new Image();
+      imgLarge.src = placeholder.dataset.large;
+      imgLarge.onload = function () {
+        imgLarge.classList.add('loaded');
+      };
+      placeholder.appendChild(imgLarge);
+    }
+  </script>
 </body>
+
 </html>
