@@ -109,7 +109,7 @@
     <div class="component-topNav-icon">
     </div>
   </div>
-  <div onscroll="scroll(event)" class="container">
+  <div class="container">
     <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504266949097&di=4800aaa3b0fe568672449c7864da1c80&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F0%2F53d9b04e0bf68.jpg"
       alt="">
     <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504266949097&di=4800aaa3b0fe568672449c7864da1c80&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F0%2F53d9b04e0bf68.jpg"
@@ -136,6 +136,7 @@
       alt="">
   </div>
   <script>
+    document.querySelector('.container').addEventListener('scroll', scroll);
     function scroll(e) {
       if (e.target.scrollTop >= 300) {
         document.querySelector('.component-topNav').className = 'component-topNav component-topNav-white';
